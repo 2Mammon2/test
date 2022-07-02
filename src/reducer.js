@@ -1,4 +1,4 @@
-import { CREATE_TASK, DELETE_TASK, UPDATE_TASK } from "./actions";
+import { CREATE_TASK, DELETE_TASK, UPDATE_TASK } from "./constants";
 
 const reducer = (state, action) => {
   switch (action.type) {

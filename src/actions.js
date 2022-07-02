@@ -1,6 +1,4 @@
-const CREATE_TASK = "CREATE_TASK";
-const UPDATE_TASK = "UPDATE_TASK";
-const DELETE_TASK = "DELETE_TASK";
+import { CREATE_TASK, DELETE_TASK, UPDATE_TASK } from "./constants";
 
 const createTask = (payload) => {
   return {
@@ -21,11 +19,4 @@ const deleteTask = (payload) => {
   };
 };
 
-export {
-  CREATE_TASK,
-  UPDATE_TASK,
-  DELETE_TASK,
-  createTask,
-  updateTask,
-  deleteTask,
-};
+export { createTask, updateTask, deleteTask };
