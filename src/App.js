@@ -1,4 +1,5 @@
-import { useEffect, useReducer, useRef } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
+import Confetti from "react-confetti";
 import { createTask, deleteTask, updateTask } from "./actions";
 import "./App.css";
 import InputTask from "./components/InputTask";
@@ -14,6 +15,7 @@ const initState = {
 function App() {
   const [state, dispatch] = useReducer(reducer, initState);
   const inputRef = useRef();
+  const [isFinish, setIsFinish] = useState(false);
 
   const { task, tasks } = state;
 
@@ -21,8 +23,17 @@ function App() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
+  const handleFinish = () => {
+    setIsFinish(true);
+
+    setTimeout(() => {
+      setIsFinish(false);
+    }, 5000);
+  };
+
   return (
     <div className="App">
+      {isFinish && <Confetti />}
       <InputTask
         task={task}
         createTask={createTask}
@@ -40,6 +51,7 @@ function App() {
               index={index}
               deleteTask={deleteTask}
               dispatch={dispatch}
+              onFinish={handleFinish}
             />
           ))
         ) : (
