@@ -9,13 +9,9 @@
 .tasks {
   margin-top: 3rem;
 }
+
 .no-tasks {
   text-align: center;
   font-size: 1.3rem;
-}
-
-.date {
-  font-style: italic;
-  font-size: 1.1rem;
-  opacity: 50%;
+  color: #f00;
 }

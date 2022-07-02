@@ -6,7 +6,6 @@ import InputTask from "./components/InputTask";
 import Task from "./components/Task";
 import reducer from "./reducer";
 
-// Init state
 const initState = {
   task: "",
   tasks: JSON.parse(localStorage.getItem("tasks")) || [],
