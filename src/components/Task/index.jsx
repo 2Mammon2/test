@@ -9,7 +9,7 @@ const Task = ({ task, index, deleteTask, dispatch, onFinish }) => {
 
   return (
     <TaskWrapper>
-      <StyledLi>{task}</StyledLi>
+      <StyledLi title={task}>{task}</StyledLi>
       <StyledButton>
         <i className="fa-solid fa-trash-can" onClick={handleDelete}></i>
       </StyledButton>
