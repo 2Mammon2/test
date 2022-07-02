@@ -24,6 +24,6 @@ export const StyledInput = styled.input`
   border-radius: 0.5rem;
   height: 4.5rem;
   width: 100%;
-  padding-left: 4rem;
+  padding: 0 4rem;
   font-size: 1.4rem;
 `;
