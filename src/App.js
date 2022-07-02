@@ -14,8 +14,8 @@ const initState = {
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initState);
-  const inputRef = useRef();
   const [isFinish, setIsFinish] = useState(false);
+  const inputRef = useRef();
 
   const { task, tasks } = state;
 

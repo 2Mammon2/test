@@ -18,15 +18,15 @@ const InputTask = ({ task, createTask, updateTask, dispatch, inputRef }) => {
         value={task}
         type="text"
         placeholder="Add new task"
-        onChange={(e) => dispatch(createTask(e.target.value))}
         ref={inputRef}
+        onChange={(e) => dispatch(createTask(e.target.value))}
         onKeyUp={(e) => e.which === 13 && handleSubmit()}
       />
 
       <i
         className="fa-solid fa-paper-plane"
         onClick={handleSubmit}
-        onKeyDown={handleSubmit}
+        onKeyUp={handleSubmit}
       ></i>
     </InputTaskWrapper>
   );

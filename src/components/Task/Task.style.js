@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const TaskWrapper = styled.ul`
   user-select: none;
   display: flex;
-  padding: 0 2rem;
-  line-height: 4rem;
+  align-items: center;
+  padding: 2rem;
   position: relative;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   padding-right: 5rem;
@@ -18,6 +18,7 @@ export const StyledLi = styled.li`
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 2rem;
 `;
 export const StyledButton = styled.button`
   cursor: pointer;
